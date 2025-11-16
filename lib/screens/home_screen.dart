@@ -206,6 +206,43 @@ class _HomeScreenState extends State<HomeScreen> {
           const SizedBox(height: 20),
 
           Text(
+            'Otros Gustos',
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+              color: Colors.orangeAccent,
+            ),
+          ),
+          const SizedBox(height: 20),
+
+          Card(
+            color: Colors.black,
+            elevation: 4,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Column(
+              children: <Widget>[
+                // GitHub
+                ListTile(
+                  leading: const Icon(
+                    Icons.ad_units,
+                    color: Colors.orangeAccent,
+                  ),
+                  title: const Text(
+                    'Mis Gustos y pasatiempos',
+                    style: TextStyle(color: Colors.orangeAccent),
+                  ),
+
+                  trailing: const Icon(Icons.open_in_new),
+                  onTap: () => Navigator.pushNamed(context, '/pasatiempos'),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 20),
+
+          Text(
             'Versión de la App: 2.0.0',
             textAlign: TextAlign.center,
             style: TextStyle(

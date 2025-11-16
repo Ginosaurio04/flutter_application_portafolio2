@@ -3,6 +3,7 @@ import '../models/menu_options.dart';
 import 'package:flutter_application_portafolio2/screens/home_screen.dart';
 import 'package:flutter_application_portafolio2/screens/videojuegos_screen.dart';
 import 'package:flutter_application_portafolio2/screens/contacto_screen.dart';
+import 'package:flutter_application_portafolio2/screens/pasatiempos_screen.dart';
 
 class AppRoutes {
   static const initialRoute = '/home';
@@ -20,6 +21,12 @@ class AppRoutes {
       title: 'Contacto',
       screen: const ContactoScreen(title: 'Contacto'),
     ),
+    MenuOptions(
+      route: '/pasatiempos',
+      icon: Icons.home,
+      title: 'Pasatiempos',
+      screen: const PasatiemposScreen(title: 'Pasatiempos'),
+    ),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
@@ -30,6 +37,8 @@ class AppRoutes {
           const VideojuegosScreen(title: 'Videojuegos'),
       '/contacto': (BuildContext context) =>
           const ContactoScreen(title: 'Contacto'),
+      '/pasatiempos': (BuildContext context) =>
+          const PasatiemposScreen(title: 'Pasatiempos'),
     });
 
     return appRoutes;

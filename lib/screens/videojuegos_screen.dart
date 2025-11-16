@@ -8,7 +8,7 @@ class VideojuegosScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.purpleAccent, title: Text(title)),
+      appBar: AppBar(backgroundColor: Colors.black, title: Text(title)),
 
       body: ListView(
         padding: const EdgeInsets.all(20.0),
@@ -224,6 +224,16 @@ class VideojuegosScreen extends StatelessWidget {
               ),
             ),
           ),
+
+          Text(
+            'Versión de la App: 2.0.0',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 14,
+              color: Theme.of(context).colorScheme.outline,
+            ),
+          ),
+          const SizedBox(height: 20),
         ],
       ),
     );
