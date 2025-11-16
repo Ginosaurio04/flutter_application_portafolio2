@@ -39,7 +39,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: const [
                   Text(
                     'Bienvenido a mi Portafolio',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.lightBlueAccent,
+                    ),
                   ),
                   SizedBox(height: 8),
                   Text(
@@ -76,7 +80,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   // Nombre del Desarrollador
                   const Text(
                     'Gino Cova (Ginosaurio)',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.lightBlueAccent,
+                    ),
                   ),
                   const SizedBox(height: 5),
                   // Rol/Título
@@ -108,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.lightBlueAccent,
                     ),
                   ),
 
@@ -142,7 +150,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     Icons.gamepad,
                     color: Colors.purpleAccent,
                   ),
-                  title: const Text('Videojuegos Favoritos'),
+                  title: const Text(
+                    'Videojuegos Favoritos',
+                    style: TextStyle(color: Colors.purpleAccent),
+                  ),
+
                   trailing: const Icon(Icons.open_in_new),
                   onTap: () => Navigator.pushNamed(context, '/videojuegos'),
                 ),

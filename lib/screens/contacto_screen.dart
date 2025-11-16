@@ -42,6 +42,29 @@ class _ContactoScreenState extends State<ContactoScreen> {
       body: ListView(
         children: <Widget>[
           Card(
+            color: Colors.black,
+            elevation: 1,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'OPCIONES DE CONTACTO',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 8),
+                  Text('Aquí puedes ver varias opciones de contacto.'),
+                ],
+              ),
+            ),
+          ),
+
+          Card(
+            color: Colors.black,
             elevation: 4,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
