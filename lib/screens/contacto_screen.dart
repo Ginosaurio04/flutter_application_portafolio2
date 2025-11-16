@@ -39,8 +39,11 @@ class _ContactoScreenState extends State<ContactoScreen> {
 
       bottomNavigationBar: const CustomBottomNavigation(currentIndex: 1),
 
-      body: ListView(
-        children: <Widget>[
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView(
+              children: <Widget>[
           Card(
             color: Colors.black,
             elevation: 1,
@@ -178,14 +181,24 @@ class _ContactoScreenState extends State<ContactoScreen> {
               ],
             ),
           ),
-          const SizedBox(height: 20),
+              const SizedBox(height: 20),
+              ],
+            ),
+          ),
 
-          Text(
-            'Versión de la App: 2.0.0',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 14,
-              color: Theme.of(context).colorScheme.outline,
+          // Footer pinned to bottom
+          SafeArea(
+            top: false,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: Text(
+                'Versión de la App: 2.0.0',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Theme.of(context).colorScheme.outline,
+                ),
+              ),
             ),
           ),
         ],

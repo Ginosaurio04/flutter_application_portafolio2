@@ -9,11 +9,14 @@ class PasatiemposScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(title)),
-      body: ListView(
-        padding: const EdgeInsets.all(16.0),
+      body: Column(
         children: [
-          // Card 1: FC Barcelona
-          Card(
+          Expanded(
+            child: ListView(
+              padding: const EdgeInsets.all(16.0),
+              children: [
+                // Card 1: FC Barcelona
+                Card(
             margin: const EdgeInsets.only(bottom: 12),
             child: ListTile(
               contentPadding: const EdgeInsets.symmetric(
@@ -23,7 +26,7 @@ class PasatiemposScreen extends StatelessWidget {
               leading: const CircleAvatar(
                 radius: 28,
                 // Replace the asset path below with your FC Barcelona logo file
-                backgroundImage: AssetImage('assets/fc_barcelona.png'),
+                backgroundImage: AssetImage('assets/descarga (12).jpeg'),
               ),
               title: const Text(
                 'FC Barcelona',
@@ -106,17 +109,26 @@ class PasatiemposScreen extends StatelessWidget {
               ),
               subtitle: const Text('RoyalGunners FC'),
             ),
-          ),
-
-          Text(
-            'Versión de la App: 2.0.0',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 14,
-              color: Theme.of(context).colorScheme.outline,
+                ),
+              ],
             ),
           ),
-          const SizedBox(height: 20),
+
+          // Footer pinned to bottom (uses SafeArea to avoid system intrusions)
+          SafeArea(
+            top: false,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: Text(
+                'Versión de la App: 2.0.0',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Theme.of(context).colorScheme.outline,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
