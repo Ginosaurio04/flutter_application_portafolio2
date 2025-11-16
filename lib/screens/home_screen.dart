@@ -139,7 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 // GitHub
                 ListTile(
                   leading: const Icon(
-                    Icons.alternate_email,
+                    Icons.gamepad,
                     color: Colors.purpleAccent,
                   ),
                   title: const Text('Videojuegos Favoritos'),

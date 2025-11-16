@@ -37,66 +37,11 @@ class VideojuegosScreen extends StatelessWidget {
 
           // Card with image for "The Last of Us" using CircleAvatar.backgroundImage
           Card(
-            margin: const EdgeInsets.only(bottom: 8),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
             child: ListTile(
-              contentPadding: const EdgeInsets.symmetric(
-                horizontal: 28,
-                vertical: 25,
-              ),
               leading: const CircleAvatar(
-                radius: 26,
-                backgroundImage: AssetImage('assets/ff7 boxart - Bing.jpeg'),
+                radius: 30,
+                backgroundImage: AssetImage('assets/God of war 3.jpeg'),
               ),
-              title: const Text(
-                'The Last of Us',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-              subtitle: const Text('Aventura, narrativa y supervivencia.'),
-              trailing: TextButton(
-                onPressed: () {
-                  showDialog(
-                    context: context,
-                    builder: (context) => AlertDialog(
-                      title: const Text('The Last of Us'),
-                      content: const Text(
-                        'The Last of Us es un juego de aventura y supervivencia con una historia emocional y personajes memorables.',
-                      ),
-                      actions: [
-                        TextButton(
-                          onPressed: () => Navigator.of(context).pop(),
-                          child: const Text('Cerrar'),
-                        ),
-                      ],
-                    ),
-                  );
-                },
-                child: const Text('Ver más'),
-              ),
-              onTap: () {
-                showDialog(
-                  context: context,
-                  builder: (context) => AlertDialog(
-                    title: const Text('The Last of Us'),
-                    content: const Text(
-                      'The Last of Us es un juego de aventura y supervivencia con una historia emocional y personajes memorables.',
-                    ),
-                    actions: [
-                      TextButton(
-                        onPressed: () => Navigator.of(context).pop(),
-                        child: const Text('Cerrar'),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: const Icon(Icons.videogame_asset),
               title: const Text('God of War 3'),
               subtitle: const Text('Acción épica y mitología.'),
             ),
@@ -104,7 +49,10 @@ class VideojuegosScreen extends StatelessWidget {
           const SizedBox(height: 8),
           Card(
             child: ListTile(
-              leading: const Icon(Icons.videogame_asset),
+              leading: const CircleAvatar(
+                radius: 30,
+                backgroundImage: AssetImage('assets/ff7 boxart - Bing.jpeg'),
+              ),
               title: const Text('Final Fantasy 7'),
               subtitle: const Text('RPG clásico con gran historia.'),
             ),
