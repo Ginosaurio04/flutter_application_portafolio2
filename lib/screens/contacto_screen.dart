@@ -86,6 +86,71 @@ class _ContactoScreenState extends State<ContactoScreen> {
               ],
             ),
           ),
+
+          Card(
+            color: Colors.black,
+            elevation: 4,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Column(
+              children: <Widget>[
+                // GitHub
+                ListTile(
+                  leading: const Icon(
+                    Icons.alternate_email,
+                    color: Colors.purpleAccent,
+                  ),
+                  title: const Text('Correo Institucional'),
+                  subtitle: const Text('gcova.1249@unimar.edu.ve'),
+                ),
+              ],
+            ),
+          ),
+
+          Card(
+            color: Colors.black,
+            elevation: 8,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Column(
+              children: <Widget>[
+                // GitHub
+                ListTile(
+                  leading: const Icon(Icons.phone, color: Colors.purpleAccent),
+                  title: const Text('Telefono'),
+                  subtitle: const Text('0414*****52'),
+                ),
+              ],
+            ),
+          ),
+
+          Card(
+            color: Colors.black,
+            elevation: 8,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Column(
+              children: <Widget>[
+                // GitHub
+                ListTile(
+                  leading: const Icon(
+                    Icons.camera_alt,
+                    color: Colors.purpleAccent,
+                  ),
+                  title: const Text('Instagram'),
+                  subtitle: const Text('ginomargiotta04'),
+                  trailing: const Icon(Icons.open_in_new),
+                  onTap: () => _launchURL(
+                    context,
+                    'https://www.instagram.com/ginomargiotta04/',
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
