@@ -136,6 +136,16 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
 
+          Text(
+            'Hobies y Proyectos',
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+              color: Colors.lightBlueAccent,
+            ),
+          ),
+          const SizedBox(height: 20),
+
           Card(
             color: Colors.black,
             elevation: 4,
@@ -162,6 +172,47 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           const SizedBox(height: 20),
+
+          Card(
+            color: Colors.black,
+            elevation: 4,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Column(
+              children: <Widget>[
+                // GitHub
+                ListTile(
+                  leading: const Icon(Icons.web, color: Colors.green),
+                  title: const Text(
+                    'Proyectos Referentes a la Carrera',
+                    style: TextStyle(color: Colors.green),
+                  ),
+                ),
+
+                Text(
+                  '- Sistema que simula Onefootball  llamada TwoFootball (C# y MySQL)\n'
+                  '- Página Web Informativa de la UNIMAR (HTML y CSS)\n'
+                  '- Una Version de Pac-man (C++)\n'
+                  '- Diseño UI/UX en Figma para apps móviles y web\n'
+                  '- Un sistema que simula el sistema de resevas de Lidotel Margarita (Pascal)\n'
+                  '- Una Calculadora sencilla (C#)\n',
+                  style: TextStyle(fontSize: 12),
+                  textAlign: TextAlign.justify,
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 20),
+
+          Text(
+            'Versión de la App: 2.0.0',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 14,
+              color: Theme.of(context).colorScheme.outline,
+            ),
+          ),
         ],
       ),
     );

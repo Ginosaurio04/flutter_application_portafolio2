@@ -110,7 +110,7 @@ class _ContactoScreenState extends State<ContactoScreen> {
                 ListTile(
                   leading: const Icon(
                     Icons.alternate_email,
-                    color: Colors.purpleAccent,
+                    color: Colors.redAccent,
                   ),
                   title: const Text(
                     'Correo Institucional',
@@ -136,7 +136,7 @@ class _ContactoScreenState extends State<ContactoScreen> {
               children: <Widget>[
                 // GitHub
                 ListTile(
-                  leading: const Icon(Icons.phone, color: Colors.purpleAccent),
+                  leading: const Icon(Icons.phone, color: Colors.redAccent),
                   title: const Text(
                     'Telefono',
                     style: TextStyle(
@@ -163,7 +163,7 @@ class _ContactoScreenState extends State<ContactoScreen> {
                 ListTile(
                   leading: const Icon(
                     Icons.camera_alt,
-                    color: Colors.purpleAccent,
+                    color: Colors.redAccent,
                   ),
                   title: const Text(
                     'Instagram',
@@ -176,6 +176,16 @@ class _ContactoScreenState extends State<ContactoScreen> {
                   subtitle: const Text('ginomargiotta04'),
                 ),
               ],
+            ),
+          ),
+          const SizedBox(height: 20),
+
+          Text(
+            'Versión de la App: 2.0.0',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 14,
+              color: Theme.of(context).colorScheme.outline,
             ),
           ),
         ],
