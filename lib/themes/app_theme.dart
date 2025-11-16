@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  static const Color primary = Color.fromARGB(255, 39, 126, 176);
+  static const Color primary = Colors.black;
   static const Color primaryClear = Colors.white;
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
     //Tema para el AppBar

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_application_portafolio2/widgets/custom_bottom_navigation.dart';
 // Removed unused import to avoid circular/unused import issues
 
 class ContactoScreen extends StatefulWidget {
@@ -34,37 +35,9 @@ class _ContactoScreenState extends State<ContactoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title), backgroundColor: Colors.teal),
+      appBar: AppBar(title: Text(widget.title), backgroundColor: Colors.black),
 
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 2, // Índice del elemento seleccionado
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.videogame_asset),
-            label: 'Videojuegos',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.contact_mail),
-            label: 'Contacto',
-          ),
-        ],
-        selectedItemColor: Colors.amber[800],
-        onTap: (index) {
-          // Lógica para cambiar de pantalla según el índice seleccionado
-          switch (index) {
-            case 0:
-              Navigator.pushNamed(context, '/home');
-              break;
-            case 1:
-              Navigator.pushNamed(context, '/videojuegos');
-              break;
-            case 2:
-              // Ya estamos en Contacto
-              break;
-          }
-        },
-      ),
+      bottomNavigationBar: const CustomBottomNavigation(currentIndex: 1),
 
       body: ListView(
         children: <Widget>[

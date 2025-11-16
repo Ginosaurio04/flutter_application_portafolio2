@@ -10,35 +10,6 @@ class VideojuegosScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.deepPurple, title: Text(title)),
 
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 1, // Índice del elemento seleccionado
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.videogame_asset),
-            label: 'Videojuegos',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.contact_mail),
-            label: 'Contacto',
-          ),
-        ],
-        selectedItemColor: Colors.amber[800],
-        onTap: (index) {
-          // Lógica para cambiar de pantalla según el índice seleccionado
-          switch (index) {
-            case 0:
-              Navigator.pushNamed(context, '/home');
-              break;
-            case 1:
-              // Ya estamos en Videojuegos
-              break;
-            case 2:
-              Navigator.pushNamed(context, '/contacto');
-              break;
-          }
-        },
-      ),
       body: ListView(
         padding: const EdgeInsets.all(20.0),
         children: <Widget>[
@@ -63,14 +34,66 @@ class VideojuegosScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
+
+          // Card with image for "The Last of Us" using CircleAvatar.backgroundImage
           Card(
+            margin: const EdgeInsets.only(bottom: 8),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
             child: ListTile(
-              leading: const Icon(Icons.videogame_asset),
-              title: const Text('The Last of Us'),
+              contentPadding: const EdgeInsets.symmetric(
+                horizontal: 28,
+                vertical: 25,
+              ),
+              leading: const CircleAvatar(
+                radius: 26,
+                backgroundImage: AssetImage('assets/ff7 boxart - Bing.jpeg'),
+              ),
+              title: const Text(
+                'The Last of Us',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
               subtitle: const Text('Aventura, narrativa y supervivencia.'),
+              trailing: TextButton(
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: const Text('The Last of Us'),
+                      content: const Text(
+                        'The Last of Us es un juego de aventura y supervivencia con una historia emocional y personajes memorables.',
+                      ),
+                      actions: [
+                        TextButton(
+                          onPressed: () => Navigator.of(context).pop(),
+                          child: const Text('Cerrar'),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+                child: const Text('Ver más'),
+              ),
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                    title: const Text('The Last of Us'),
+                    content: const Text(
+                      'The Last of Us es un juego de aventura y supervivencia con una historia emocional y personajes memorables.',
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.of(context).pop(),
+                        child: const Text('Cerrar'),
+                      ),
+                    ],
+                  ),
+                );
+              },
             ),
           ),
-          const SizedBox(height: 8),
           Card(
             child: ListTile(
               leading: const Icon(Icons.videogame_asset),
