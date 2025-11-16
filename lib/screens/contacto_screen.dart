@@ -54,7 +54,11 @@ class _ContactoScreenState extends State<ContactoScreen> {
                 children: const [
                   Text(
                     'OPCIONES DE CONTACTO',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.redAccent,
+                    ),
                   ),
                   SizedBox(height: 8),
                   Text('Aquí puedes ver varias opciones de contacto.'),
@@ -75,9 +79,16 @@ class _ContactoScreenState extends State<ContactoScreen> {
                 ListTile(
                   leading: const Icon(
                     Icons.alternate_email,
-                    color: Colors.purpleAccent,
+                    color: Colors.redAccent,
                   ),
-                  title: const Text('GitHub'),
+                  title: const Text(
+                    'GitHub',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.redAccent,
+                    ),
+                  ),
                   subtitle: const Text('Ginosaurio04'),
                   trailing: const Icon(Icons.open_in_new),
                   onTap: () =>
@@ -101,7 +112,14 @@ class _ContactoScreenState extends State<ContactoScreen> {
                     Icons.alternate_email,
                     color: Colors.purpleAccent,
                   ),
-                  title: const Text('Correo Institucional'),
+                  title: const Text(
+                    'Correo Institucional',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.redAccent,
+                    ),
+                  ),
                   subtitle: const Text('gcova.1249@unimar.edu.ve'),
                 ),
               ],
@@ -119,7 +137,14 @@ class _ContactoScreenState extends State<ContactoScreen> {
                 // GitHub
                 ListTile(
                   leading: const Icon(Icons.phone, color: Colors.purpleAccent),
-                  title: const Text('Telefono'),
+                  title: const Text(
+                    'Telefono',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.redAccent,
+                    ),
+                  ),
                   subtitle: const Text('0414*****52'),
                 ),
               ],
@@ -140,13 +165,15 @@ class _ContactoScreenState extends State<ContactoScreen> {
                     Icons.camera_alt,
                     color: Colors.purpleAccent,
                   ),
-                  title: const Text('Instagram'),
-                  subtitle: const Text('ginomargiotta04'),
-                  trailing: const Icon(Icons.open_in_new),
-                  onTap: () => _launchURL(
-                    context,
-                    'https://www.instagram.com/ginomargiotta04/',
+                  title: const Text(
+                    'Instagram',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.redAccent,
+                    ),
                   ),
+                  subtitle: const Text('ginomargiotta04'),
                 ),
               ],
             ),
