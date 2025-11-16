@@ -1,0 +1,41 @@
+Card(
+            margin: const EdgeInsets.only(bottom: 8),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: ListTile(
+              contentPadding: const EdgeInsets.symmetric(
+                horizontal: 28,
+                vertical: 25,
+              ),
+              leading: const CircleAvatar(
+                radius: 26,
+                backgroundImage: AssetImage('assets/The Last of Us.jpeg'),
+              ),
+              title: const Text(
+                'The Last of Us',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
+              subtitle: const Text('Aventura, narrativa y supervivencia.'),
+              trailing: TextButton(
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: const Text('The Last of Us'),
+                      content: const Text(
+                        'The Last of Us es un juego de aventura y supervivencia con una historia emocional y personajes memorables.',
+                      ),
+                      actions: [
+                        TextButton(
+                          onPressed: () => Navigator.of(context).pop(),
+                          child: const Text('Cerrar'),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+                child: const Text('Ver más'),
+              ),
+            ),
+          ),
