@@ -16,7 +16,6 @@ class CustomBottomNavigation extends StatelessWidget {
       ),
     ];
 
-    // Clamp the provided index so it's always inside valid range.
     final validatedIndex = max(0, min(currentIndex, items.length - 1));
 
     return BottomNavigationBar(
