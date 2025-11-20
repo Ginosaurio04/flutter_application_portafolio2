@@ -44,144 +44,154 @@ class _ContactoScreenState extends State<ContactoScreen> {
           Expanded(
             child: ListView(
               children: <Widget>[
-          Card(
-            color: Colors.black,
-            elevation: 1,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text(
-                    'OPCIONES DE CONTACTO',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.redAccent,
+                Card(
+                  color: Colors.black,
+                  elevation: 1,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    side: const BorderSide(color: Colors.redAccent),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'OPCIONES DE CONTACTO',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.redAccent,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text('Aquí puedes ver varias opciones de contacto.'),
+                      ],
                     ),
                   ),
-                  SizedBox(height: 8),
-                  Text('Aquí puedes ver varias opciones de contacto.'),
-                ],
-              ),
-            ),
-          ),
-
-          Card(
-            color: Colors.black,
-            elevation: 4,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Column(
-              children: <Widget>[
-                // GitHub
-                ListTile(
-                  leading: const Icon(
-                    Icons.alternate_email,
-                    color: Colors.redAccent,
-                  ),
-                  title: const Text(
-                    'GitHub',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.redAccent,
-                    ),
-                  ),
-                  subtitle: const Text('Ginosaurio04'),
-                  trailing: const Icon(Icons.open_in_new),
-                  onTap: () =>
-                      _launchURL(context, 'https://github.com/Ginosaurio04'),
                 ),
-              ],
-            ),
-          ),
 
-          Card(
-            color: Colors.black,
-            elevation: 4,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Column(
-              children: <Widget>[
-                // GitHub
-                ListTile(
-                  leading: const Icon(
-                    Icons.alternate_email,
-                    color: Colors.redAccent,
+                Card(
+                  color: Colors.black,
+                  elevation: 4,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    side: const BorderSide(color: Colors.redAccent),
                   ),
-                  title: const Text(
-                    'Correo Institucional',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.redAccent,
-                    ),
+                  child: Column(
+                    children: <Widget>[
+                      // GitHub
+                      ListTile(
+                        leading: const Icon(
+                          Icons.alternate_email,
+                          color: Colors.redAccent,
+                        ),
+                        title: const Text(
+                          'GitHub',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.redAccent,
+                          ),
+                        ),
+                        subtitle: const Text('Ginosaurio04'),
+                        trailing: const Icon(Icons.open_in_new),
+                        onTap: () => _launchURL(
+                          context,
+                          'https://github.com/Ginosaurio04',
+                        ),
+                      ),
+                    ],
                   ),
-                  subtitle: const Text('gcova.1249@unimar.edu.ve'),
                 ),
-              ],
-            ),
-          ),
 
-          Card(
-            color: Colors.black,
-            elevation: 8,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Column(
-              children: <Widget>[
-                // GitHub
-                ListTile(
-                  leading: const Icon(Icons.phone, color: Colors.redAccent),
-                  title: const Text(
-                    'Telefono',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.redAccent,
-                    ),
+                Card(
+                  color: Colors.black,
+                  elevation: 4,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    side: const BorderSide(color: Colors.redAccent),
                   ),
-                  subtitle: const Text('0414*****52'),
+                  child: Column(
+                    children: <Widget>[
+                      // GitHub
+                      ListTile(
+                        leading: const Icon(
+                          Icons.alternate_email,
+                          color: Colors.redAccent,
+                        ),
+                        title: const Text(
+                          'Correo Institucional',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.redAccent,
+                          ),
+                        ),
+                        subtitle: const Text('gcova.1249@unimar.edu.ve'),
+                      ),
+                    ],
+                  ),
                 ),
-              ],
-            ),
-          ),
 
-          Card(
-            color: Colors.black,
-            elevation: 8,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Column(
-              children: <Widget>[
-                // GitHub
-                ListTile(
-                  leading: const Icon(
-                    Icons.camera_alt,
-                    color: Colors.redAccent,
+                Card(
+                  color: Colors.black,
+                  elevation: 8,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    side: const BorderSide(color: Colors.redAccent),
                   ),
-                  title: const Text(
-                    'Instagram',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.redAccent,
-                    ),
+                  child: Column(
+                    children: <Widget>[
+                      // GitHub
+                      ListTile(
+                        leading: const Icon(
+                          Icons.phone,
+                          color: Colors.redAccent,
+                        ),
+                        title: const Text(
+                          'Telefono',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.redAccent,
+                          ),
+                        ),
+                        subtitle: const Text('0414*****52'),
+                      ),
+                    ],
                   ),
-                  subtitle: const Text('ginomargiotta04'),
                 ),
-              ],
-            ),
-          ),
-              const SizedBox(height: 20),
+
+                Card(
+                  color: Colors.black,
+                  elevation: 8,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    side: const BorderSide(color: Colors.redAccent),
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      // GitHub
+                      ListTile(
+                        leading: const Icon(
+                          Icons.camera_alt,
+                          color: Colors.redAccent,
+                        ),
+                        title: const Text(
+                          'Instagram',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.redAccent,
+                          ),
+                        ),
+                        subtitle: const Text('ginomargiotta04'),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 20),
               ],
             ),
           ),

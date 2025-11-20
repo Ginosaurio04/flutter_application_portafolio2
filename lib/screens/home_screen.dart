@@ -31,6 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
             elevation: 1,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
+              side: const BorderSide(color: Colors.lightBlueAccent),
             ),
             child: Padding(
               padding: const EdgeInsets.all(16.0),
@@ -59,6 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
             color: Colors.black,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
+              side: const BorderSide(color: Colors.lightBlueAccent),
             ),
             margin: const EdgeInsets.only(bottom: 30),
             child: Padding(
@@ -105,6 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
             elevation: 4,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
+              side: const BorderSide(color: Colors.lightBlueAccent),
             ),
             child: Padding(
               padding: const EdgeInsets.all(16.0),
@@ -151,6 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
             elevation: 4,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
+              side: const BorderSide(color: Colors.purpleAccent),
             ),
             child: Column(
               children: <Widget>[
@@ -178,6 +182,7 @@ class _HomeScreenState extends State<HomeScreen> {
             elevation: 4,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
+              side: const BorderSide(color: Colors.green),
             ),
             child: Column(
               children: <Widget>[
@@ -220,6 +225,7 @@ class _HomeScreenState extends State<HomeScreen> {
             elevation: 4,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
+              side: const BorderSide(color: Colors.orangeAccent),
             ),
             child: Column(
               children: <Widget>[
