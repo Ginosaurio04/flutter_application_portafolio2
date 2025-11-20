@@ -187,6 +187,11 @@ class _ContactoScreenState extends State<ContactoScreen> {
                           ),
                         ),
                         subtitle: const Text('ginomargiotta04'),
+                        trailing: const Icon(Icons.open_in_new),
+                        onTap: () => _launchURL(
+                          context,
+                          'https://www.instagram.com/ginomargiotta04/',
+                        ),
                       ),
                     ],
                   ),
