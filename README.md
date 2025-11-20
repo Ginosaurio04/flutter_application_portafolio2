@@ -15,7 +15,7 @@ Este proyecto trata en la elaboracion de un portafolio referente a mi persona pa
 Se puede instalar de la siguiente manera
 
 ```bash
-  En android: Descargar e instalar apk
+  En android: Cuando este disponible el apk, se puede descargar
   En IOS: no hay version🙃
 ```
     
